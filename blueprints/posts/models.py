@@ -6,3 +6,8 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
     content = db.Column(db.Text(), nullable=False)
+
+    def __repr__(self):
+        return f'Post(id={self.id}, title={self.title!r}, content={self.content!r})'
+    def __srt__(self):
+        return f'Post {self.title}'
